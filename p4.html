@@ -1,0 +1,98 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="utf-8" />
+        <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no" />
+        <meta name="description" content="" />
+        <meta name="author" content="" />
+        <title>Docker Website</title>
+        <link rel="icon" type="image/x-icon" href="assets/img/favicon.ico" />
+        <!-- Font Awesome icons (free version)-->
+        <script src="https://use.fontawesome.com/releases/v5.15.1/js/all.js" crossorigin="anonymous"></script>
+        <!-- Google fonts-->
+        <link href="https://fonts.googleapis.com/css?family=Montserrat:400,700" rel="stylesheet" type="text/css" />
+        <link href="https://fonts.googleapis.com/css?family=Droid+Serif:400,700,400italic,700italic" rel="stylesheet" type="text/css" />
+        <link href="https://fonts.googleapis.com/css?family=Roboto+Slab:400,100,300,700" rel="stylesheet" type="text/css" />
+        <!-- Core theme CSS (includes Bootstrap)-->
+        <link href="css/styles.css" rel="stylesheet" />
+    </head>
+    <body id="page-top">
+        <!-- Navigation-->
+        <nav class="navbar navbar-expand-lg navbar-dark fixed-top" id="mainNav">
+            <div class="container">
+               
+                <button class="navbar-toggler navbar-toggler-right" type="button" data-toggle="collapse" data-target="#navbarResponsive" aria-controls="navbarResponsive" aria-expanded="false" aria-label="Toggle navigation">
+                    Menu
+                    <i class="fas fa-bars ml-1"></i>
+                </button>
+                <div class="collapse navbar-collapse" id="navbarResponsive">
+                    <ul class="navbar-nav text-uppercase ml-auto">
+                        <li class="nav-item"><a class="nav-link js-scroll-trigger" href="index.html">home</a></li>
+                        
+                    </ul>
+                </div>
+            </div>
+        </nav>
+        <!-- Masthead-->
+        <header class="masthead">
+            <div class="container">
+                <div class="masthead-subheading">A tutorial on how to setup a web server on your local computer using docker</div>
+            </div>
+        </header>
+        <section>
+            <p class="text-muted textp">
+                Step 1 − The first step is to build our Docker File. Let’s use vim and create a Docker File with the following information.
+            </p>
+            <img class="img-fluid" src="assets/img/step1.PNG" alt="" />
+            <p class="text-muted textp">
+                -The following points need to be noted about the above statements −</p>
+            <p class="text-muted textp">
+                -We are first creating our image to be from the Ubuntu base image.</p>
+            <p class="text-muted textp">
+                -Next, we are going to use the RUN command to update all the packages on the Ubuntu system.</p>
+            <p class="text-muted textp">
+                -Next, we use the RUN command to install apache2 on our image.</p>
+            <p class="text-muted textp">
+                -Next, we use the RUN command to install the necessary utility apache2 packages on our image.</p>
+            <p class="text-muted textp">
+                -Next, we use the RUN command to clean any unnecessary files from the system.</p>
+            <p class="text-muted textp">
+                -The EXPOSE command is used to expose port 80 of Apache in the container to the Docker host.</p>
+            <p class="text-muted textp">
+                -Finally, the CMD command is used to run apache2 in the background.</p>
+            <img class="img-fluid" src="assets/img/step1x.PNG" alt="" />
+             
+            
+            <p class="text-muted textp">Step 2 − Run the Docker build command to build the Docker file. It can be done using the following command −
+
+            <p class="text-muted textp">    sudo docker build –t=”mywebserver” . </p>
+            <p class="text-muted textp"> We are tagging our image as mywebserver. Once the image is built, you will get a successful message that the file has been built.</p>
+            <img class="img-fluid" src="assets/img/step2.jpg" alt="" />
+
+            <p class="text-muted textp">Step 3 − Now that the web server file has been built, it’s now time to create a container from the image. We can do this with the Docker run command. </p>
+            <p class="text-muted textp">sudo docker run –d –p 80:80 mywebserver </p>
+            <img class="img-fluid" src="assets/img/step3.jpg" alt="" />
+
+            <p class="text-muted textp">The following points need to be noted about the above command −</p>
+            <p class="text-muted textp">- The port number exposed by the container is 80. Hence with the –p command, we are mapping the same port number to the 80 port number on our localhost.
+            </p>
+            <p class="text-muted textp">- The –d option is used to run the container in detached mode. This is so that the container can run in the background.
+            </p>
+            <p class="text-muted textp">If you go to port 80 of the Docker host in your web browser, you will now see that Apache is up and running.
+            </p>
+            <h3 class="textp">resources:</h3>
+             <p class="text-muted textp">https://www.tutorialspoint.com/docker/building_web_server_docker_file.htm</p>
+        </section>
+        
+        <!-- Bootstrap core JS-->
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+        <script src="https://cdn.jsdelivr.net/npm/bootstrap@4.5.3/dist/js/bootstrap.bundle.min.js"></script>
+        <!-- Third party plugin JS-->
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery-easing/1.4.1/jquery.easing.min.js"></script>
+        <!-- Contact form JS-->
+        <script src="assets/mail/jqBootstrapValidation.js"></script>
+        <script src="assets/mail/contact_me.js"></script>
+        <!-- Core theme JS-->
+        <script src="js/scripts.js"></script>
+    </body>
+</html>
