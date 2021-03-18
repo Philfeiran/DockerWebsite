@@ -87,6 +87,7 @@ h1, h2, h3, h4, h5, h6 {
 p {
   margin-top: 0;
   margin-bottom: 1rem;
+
 }
 
 abbr[title],
@@ -477,6 +478,7 @@ mark,
 .img-fluid {
   max-width: 100%;
   height: auto;
+  margin-left: 40rem;
 }
 
 .img-thumbnail {
@@ -9984,8 +9986,13 @@ body {
 
 p {
   line-height: 1.75;
-}
 
+}
+.textp {
+  line-height: 2.75;
+  width: 800px;
+  margin-left: 35rem;
+}
 .page-section {
   padding: 6rem 0;
 }
