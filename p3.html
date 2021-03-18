@@ -36,35 +36,30 @@
         <!-- Masthead-->
         <header class="masthead">
             <div class="container">
-                <div class="masthead-subheading">What is virtualization</div>
+                <div class="masthead-subheading"> How do they compare</div>
             </div>
         </header>
         <section>
-            <p class="text-muted textp">Virtualization is technology that lets you create useful IT services using resources that are traditionally bound to hardware. It allows you to use a physical machine’s full capacity by distributing its capabilities among many users or environments.
-
-                    In more practical terms, imagine you have 3 physical servers with individual dedicated purposes. 
-                    One is a mail server, another is a web server, and the last one runs internal legacy applications.
-                     Each server is being used at about 30% capacity—just a fraction of their running potential. But since
-                      the legacy apps remain important to your internal operations, you have to keep them and the third server that hosts them, right?
-            </p>
-            <img class="img-fluid" src="assets/img/server-usage-500x131.png" alt="" />
             <p class="text-muted textp">
-                Traditionally, yes. It was often easier and more reliable to run individual tasks on individual servers: 1 server,
-                 1 operating system, 1 task. It wasn’t easy to give 1 server multiple brains. But with virtualization, you can split
-                  the mail server into 2 unique ones that can handle independent tasks so the legacy apps can be migrated. It’s the 
-                  same hardware, you’re just using more of it more efficiently.</p>
-             <img class="img-fluid" src="assets/img/server-usage-for-virtualization-500x131.png" alt="" />
-             <p class="text-muted textp">
-                 There are many reasons why people utilize virtualization in computing. To desktop users, the most common use is to
-                  be able to run applications meant for a different operating system without having to switch computers or reboot into
-                   a different system. For administrators of servers, virtualization also offers the ability to run different operating
-                    systems, but perhaps, more importantly, it offers a way to segment a large system into many smaller parts, allowing the
-                     server to be used more efficiently by a number of different users or applications with different needs. It also allows
-                      for isolation, keeping programs running inside of a virtual machine safe from the processes taking place in another virtual 
-                      machine on the same host.</p>
+                If you’re looking to improve scalability, reduce overhead costs, and standardize software deployments 
+                across multiple machines and platforms, containers and virtual machines (VMs) are two of the top approaches
+                 in use today. They’re not mutually exclusive, either—both can help your IT team become more agile and responsive
+                  to business demands. However, the concepts can be confusing. Both containers and virtual machines (VMs) are
+                   software technologies that create self-contained virtual packages. Beyond that commonality, they differ in their 
+                   operations, characteristics and use cases. 
+            </p>
+            <img class="img-huge" src="assets/img/vis vs con.png" alt="" />
+            <p class="text-muted textp">
+                A Docker container image is a lightweight, standalone, executable package of software that 
+                includes everything needed to run an application: code, runtime, system tools, system libraries and settings.
+                Container images become containers at runtime and in the case of Docker containers - images become containers
+                 when they run on Docker Engine. Available for both Linux and Windows-based applications, containerized software
+                  will always run the same, regardless of the infrastructure. Containers isolate software from its environment
+                   and ensure that it works uniformly despite differences for instance between development and staging.</p>
+             
              <h3 class="textp">resources:</h3>
-             <p class="text-muted textp">https://www.redhat.com/en/topics/virtualization/what-is-virtualization</p>
-             <p class="text-muted textp">https://opensource.com/resources/virtualization</p>
+             <p class="text-muted textp">https://www.docker.com/resources/what-container</p>
+             <p class="text-muted textp">https://www.citrix.com/solutions/app-delivery-and-security/what-is-containerization.html</p>
         </section>
         
         <!-- Bootstrap core JS-->
